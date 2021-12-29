@@ -1,7 +1,7 @@
 # typecode
 Improve my typing skill and programming skill by randomly select code from leetcode solution
 
-- [x] Add leetcode links (kind of work)
+- [x] Add leetcode links (kind of done)
 - [ ] Optimise complete page and how to switch
 
 ## Resource
