@@ -1,5 +1,5 @@
 # [typecode](xihajun.github.io/typecode/)
-Improve my typing skill and coding skill by randomly select code from leetcode solution
+Improve my typing speed and coding skill by randomly selecting code from leetcode solution with the question
 
 - [x] Add leetcode links (kind of done)
 - [ ] Optimise some of the pages & algorithm selection
