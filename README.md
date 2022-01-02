@@ -1,4 +1,4 @@
-# [typecode](xihajun.github.io/typecode/)
+# [typecode](http://xihajun.github.io/typecode/)
 __Improve my typing speed and coding skill by randomly selecting code from leetcode solution with the question__
 
 
