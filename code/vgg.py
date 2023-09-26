@@ -1,3 +1,6 @@
+"""
+This is VGG
+"""
 class VGG(nn.Module):
   ARCH = [64, 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512, 'M']
 
