@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Type - A typing practice website for programmers">
 	<title>Type</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/codemirror.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
-	
 	<noscript>
 		<div class="error">
 			JavaScript must be enabled.
@@ -18,11 +20,23 @@
 	<div id="toolbar">
 		<button id="back">&#8249; Back</button>
 		<button id="restart">Restart</button>
-		<!-- <button id="random">RandomSample</button>
-		
-		  <input id="url" placeholder="put your link here"></input>
-		-->
-		<input type="button" onclick="myFunction()" value="New Code">
+		<button id="new-code">New Code</button>
+		<button id="import-code">Import Code</button>
+		<button id="paste-code">Paste Code</button>
+		<input type="file" id="code-file" accept=".txt,.js,.py,.java,.cpp,.c,.cs,.swift,.html,.css" style="display: none;">
+		<div id="paste-modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>Paste Your Code</h2>
+					<span class="close-modal">&times;</span>
+				</div>
+				<textarea id="code-input" placeholder="Paste your code here..."></textarea>
+				<div class="modal-footer">
+					<button class="cancel-btn">Cancel</button>
+					<button class="confirm-btn">Confirm</button>
+				</div>
+			</div>
+		</div>
 		<select id="language">
 			<option value="auto-detect">Auto-Detect</option>
 		</select>

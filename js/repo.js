@@ -7,7 +7,7 @@ localforage.getItem(repo)
 		for (var f in val) {
 			let li = $("<li></li>");
 			let a = $("<a></a>");
-			a.attr("href", `type.html#${repo}/${f}`);
+			a.attr("href", `index.html#${repo}/${f}`);
 			let div = $("<div></div>");
 			div.text(f);
 			a.append(div);
@@ -23,7 +23,7 @@ $("#form").submit((event) => {
 	event.preventDefault();
 
 	let file = $("#file").val();
-	window.location.href = `type.html#${repo}/${file}`;
+	window.location.href = `index.html#${repo}/${file}`;
 });
 
 $("#back").click(() => {
