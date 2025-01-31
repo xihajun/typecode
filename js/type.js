@@ -492,19 +492,18 @@ function getFileExtension() {
 	let parts = filePath.split(".");
 	return parts[parts.length - 1];
 }
-
 function getChunk(code) {
-        // get chuck with smaller size (20 lines) for better readability
+        // get chuck with smaller size (50 lines) for better readability
 	let lines = code.split("\n");
 	return localforage.getItem(repo)
 		.then((val) => {
 			if (val && val[filePath] && val[filePath].chunk) {
 				let chunk = val[filePath].chunk;
-				let totalChunks = Math.ceil(lines.length / 20);
+				let totalChunks = Math.ceil(lines.length / 50);
 				if (chunk == totalChunks - 1) {
-					return lines.slice(lines.length - (lines.length % 20 || 20), lines.length);
+					return lines.slice(lines.length - (lines.length % 50 || 50), lines.length);
 				} else {
-					return lines.slice(chunk * 20, Math.min((chunk + 1) * 20, lines.length));
+					return lines.slice(chunk * 50, Math.min((chunk + 1) * 50, lines.length));
 				}
 			} else {
 				if (!val) val = {};
@@ -514,14 +513,13 @@ function getChunk(code) {
 					.catch((e) => {
 						throw e;
 					});
-				return lines.slice(0, Math.min(20, lines.length));
+				return lines.slice(0, Math.min(50, lines.length));
 			}
 		})
 		.then((lines) => {
 			return lines.join("\n");
 		});
 }
-
 function goToNextChunk() {
 	localforage.getItem(repo)
 		.then((val) => {
